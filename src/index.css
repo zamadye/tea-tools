@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .grid-pattern {
+    background-size: 20px 20px;
+    background-image: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+                     linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
+  }
+  
+  .glow {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  }
+}
+
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
