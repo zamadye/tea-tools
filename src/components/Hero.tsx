@@ -1,6 +1,6 @@
 
 import { Terminal } from "./Terminal";
-import { Terminal as TerminalIcon, Github } from "lucide-react";
+import { Terminal as TerminalIcon, Github, Code } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "@/hooks/use-toast";
 
@@ -21,14 +21,14 @@ export function Hero() {
           Web3 CLI & SDK Tools for Builders
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 animate-fade-in delay-100">
-          ENS resolver, wallet tracker, token price fetcher, gas estimator, and more – all in one package. Built for airdrop hunters & Web3 developers.
+          The essential toolkit for airdrop hunters & Web3 developers. Track wallets, resolve ENS names, and automate testnet interactions with ease.
         </p>
         <div className="flex flex-wrap justify-center gap-4 animate-fade-in delay-200">
           <Button
             variant="default"
             size="lg"
             onClick={copyCommand}
-            className="bg-cyan-500 hover:bg-cyan-600 text-white font-mono"
+            className="font-mono"
           >
             <TerminalIcon className="mr-2 h-5 w-5" />
             npm install tea-tools
@@ -37,11 +37,20 @@ export function Hero() {
             variant="outline"
             size="lg"
             asChild
-            className="border-gray-700 hover:bg-gray-800 text-white hover:border-cyan-500/50"
           >
             <a href="https://github.com/tea/tea-tools" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
               View on GitHub
+            </a>
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+          >
+            <a href="/docs" className="hover:text-cyan-400">
+              <Code className="mr-2 h-5 w-5" />
+              Read the Docs
             </a>
           </Button>
         </div>

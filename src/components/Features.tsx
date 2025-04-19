@@ -1,43 +1,42 @@
 
 import { FileCode, Wallet, Terminal, Link, ChartLine, FileText } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const features = [
   {
     name: "resolveENS()",
-    description: "ENS ↔ address converter with multi-chain support",
+    description: "Convert ENS names to addresses with multi-chain support",
     icon: FileCode,
-    snippet: 'await resolveENS("vitalik.eth")'
+    snippet: 'const addr = await resolveENS("vitalik.eth")'
   },
   {
-    name: "getGas(chain)",
-    description: "Real-time gas tracker for any EVM chain",
+    name: "getGas()",
+    description: "Check live gas fees by chain with historical data",
     icon: ChartLine,
-    snippet: 'getGas("ethereum")'
+    snippet: 'const gas = await getGas("arbitrum")'
   },
   {
-    name: "wallet:track()",
-    description: "Complete wallet activity analysis and monitoring",
+    name: "walletSummary()",
+    description: "View transaction history & protocols used by address",
     icon: Wallet,
-    snippet: 'wallet:track("0x123...")'
-  },
-  {
-    name: "generateContract()",
-    description: "Smart contract templates with one command",
-    icon: FileText,
-    snippet: 'generateContract("ERC721")'
+    snippet: 'const summary = await walletSummary("0x123...")'
   },
   {
     name: "getTokenPrice()",
-    description: "Live token prices from multiple sources",
+    description: "Fetch token prices from multiple sources",
+    icon: FileText,
+    snippet: 'const price = await getTokenPrice("ETH")'
+  },
+  {
+    name: "generateContract()",
+    description: "Create ERC-20 or NFT smart contract boilerplate",
     icon: Terminal,
-    snippet: 'getTokenPrice("ETH")'
+    snippet: 'await generateContract("ERC721")'
   },
   {
     name: "farmingCLI()",
-    description: "Automated testnet transactions & faucet tools",
+    description: "Automate testnet farming & airdrop tasks",
     icon: Link,
-    snippet: 'farmingCLI --chain arbitrum'
+    snippet: 'await farmingCLI("--chain arbitrum")'
   }
 ];
 
@@ -47,7 +46,7 @@ export function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            Powerful Tools for Web3 Developers
+            Modular Web3 Tools Included
           </h2>
           <p className="mt-4 text-xl text-gray-400">
             Everything you need to build, test, and deploy Web3 applications
@@ -62,7 +61,7 @@ export function Features() {
             >
               <div className="flex items-center">
                 <feature.icon className="h-8 w-8 text-cyan-400" />
-                <h3 className="ml-4 text-xl font-medium text-white">{feature.name}</h3>
+                <h3 className="ml-4 text-xl font-mono text-white">{feature.name}</h3>
               </div>
               <p className="mt-4 text-gray-400">{feature.description}</p>
               <div className="mt-4 bg-black/50 p-3 rounded font-mono text-sm text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
