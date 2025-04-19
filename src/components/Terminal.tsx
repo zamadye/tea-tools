@@ -10,15 +10,15 @@ interface Command {
 const simulatedCommands: Command[] = [
   {
     input: "tea-tools wallet:track 0x742d35Cc6634C0532925a3b844Bc454e4438f44e",
-    output: "→ Last 30 days: 12 tx, 4 protocols used, 0 airdrop detected"
+    output: "→ Wallet active on: Base, Arbitrum, Linea\n→ Total transactions: 43\n→ Airdrops detected: LayerZero, StarkNet"
   },
   {
-    input: "tea-tools getGas ethereum",
-    output: "→ Current gas: 32 gwei (Safe Low) | 45 gwei (Standard) | 52 gwei (Fast)"
+    input: "tea-tools getGas --chain arbitrum",
+    output: "→ Arbitrum current gas: 0.003 gwei\n→ Safe Low: 0.002 gwei | Standard: 0.003 gwei | Fast: 0.004 gwei"
   },
   {
     input: "tea-tools resolveENS vitalik.eth",
-    output: "→ Address: 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+    output: "→ Address: 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045\n→ Last transaction: 2h ago on Ethereum"
   }
 ];
 
