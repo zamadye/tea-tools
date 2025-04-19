@@ -1,0 +1,21 @@
+{
+    "name": "tea-tools",
+    "description": "Web3 CLI & SDK for builders and airdrop hunters",
+    "maintainers": [
+      {
+        "name": "Your Name",
+        "email": "you@example.com",
+        "address": "0xYourWalletAddress"
+      }
+    ],
+    "quorum": 1,
+    "license": "MIT",
+    "repository": "https://github.com/zamadye/tea-tools",
+    "packageManagers": ["npm"],
+    "url": "https://web3-utility-tea-tools.lovable.app",
+    "teaProtocol": {
+      "version": "1.0.0",
+      "network": "base"
+    }
+  }
+  
