@@ -1,6 +1,6 @@
 
 import { Terminal } from "./Terminal";
-import { Wallet, Terminal as TerminalIcon, Github } from "lucide-react";
+import { Terminal as TerminalIcon, Github } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "@/hooks/use-toast";
 
@@ -21,14 +21,14 @@ export function Hero() {
           Web3 CLI & SDK Tools for Builders
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 animate-fade-in delay-100">
-          ENS resolver, wallet tracker, token price fetcher, gas estimator, and more – all in one package.
+          ENS resolver, wallet tracker, token price fetcher, gas estimator, and more – all in one package. Built for airdrop hunters & Web3 developers.
         </p>
         <div className="flex flex-wrap justify-center gap-4 animate-fade-in delay-200">
           <Button
             variant="default"
             size="lg"
             onClick={copyCommand}
-            className="bg-cyan-500 hover:bg-cyan-600 hover:glow transition-all duration-300"
+            className="bg-cyan-500 hover:bg-cyan-600 text-white font-mono"
           >
             <TerminalIcon className="mr-2 h-5 w-5" />
             npm install tea-tools
@@ -36,10 +36,13 @@ export function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="border-gray-700 hover:bg-gray-800 hover:border-cyan-500/50 transition-all duration-300"
+            asChild
+            className="border-gray-700 hover:bg-gray-800 text-white hover:border-cyan-500/50"
           >
-            <Github className="mr-2 h-5 w-5" />
-            View on GitHub
+            <a href="https://github.com/tea/tea-tools" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-5 w-5" />
+              View on GitHub
+            </a>
           </Button>
         </div>
         <div className="mt-12 animate-fade-in delay-300">

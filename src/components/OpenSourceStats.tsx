@@ -1,4 +1,3 @@
-
 import { Github, Users, Star, Award } from "lucide-react";
 import { Badge } from "./ui/badge";
 
@@ -9,7 +8,7 @@ export function OpenSourceStats() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <Badge variant="default" className="bg-green-600">✓ Verified on Tea</Badge>
+              <Badge variant="default" className="bg-green-600">✓ Tea Protocol Verified</Badge>
               <Badge variant="outline" className="border-green-600/50">MIT License</Badge>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -28,6 +27,17 @@ export function OpenSourceStats() {
               <div className="flex items-center space-x-2 text-gray-400">
                 <Award className="h-5 w-5 text-cyan-500" />
                 <span>#420 Top Tea Tool</span>
+              </div>
+            </div>
+            <div className="mt-6 p-4 bg-black/50 rounded-lg border border-gray-800">
+              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Tea Protocol Rewards</h3>
+              <p className="text-gray-300 mb-4">
+                Earn TEA tokens by contributing to this project. Register your wallet on Tea Protocol to start earning rewards.
+              </p>
+              <div className="space-y-2 text-sm text-gray-400">
+                <div>✓ Registered on tea.xyz</div>
+                <div>✓ Valid constitution.json</div>
+                <div>✓ Earning TEA rewards</div>
               </div>
             </div>
           </div>

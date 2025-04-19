@@ -1,6 +1,7 @@
 
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
+import { GetStarted } from "@/components/GetStarted";
 import { CLIPlayground } from "@/components/CLIPlayground";
 import { OpenSourceStats } from "@/components/OpenSourceStats";
 import { Testimonials } from "@/components/Testimonials";
@@ -12,6 +13,7 @@ export default function Index() {
     <div className="min-h-screen bg-black text-white font-sans">
       <Hero />
       <Features />
+      <GetStarted />
       <CLIPlayground />
       <OpenSourceStats />
       <Testimonials />
